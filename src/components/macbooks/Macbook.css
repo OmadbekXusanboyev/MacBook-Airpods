@@ -1,0 +1,80 @@
+.card {
+  position: relative;
+  width: 230px;
+  height: 360px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #3946af4d;
+  box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  transition: all 0.2s ease-in-out;
+}
+.card img {
+     transition: all 0.3s ease-in-out;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+.card img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.05);
+  border: 1px solid #3946af;
+}
+.card h3 {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+.card h5 {
+  font-size: 17px;
+}
+.card h5 span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #787676;
+}
+.card-btns {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.card-btns .buy {
+  background-color: #3946af;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #3946af;
+  transition: all 0.3s ease;
+}
+.card-btns .learn-more {
+  background-color: transparent;
+  color: #5f70ff;
+  padding: 10px 23px;
+  border: 1px solid #5f70ff;
+  border-radius: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card-btns .buy:hover {
+  background-color: #ffffff;
+  color: #3946af;
+  border: 1px solid #3946af;
+}
+.card-btns .learn-more:hover {
+  background-color: #3946af;
+  color: white;
+}

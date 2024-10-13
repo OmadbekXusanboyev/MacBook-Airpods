@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html::-webkit-scrollbar {
+  width: 13px;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #4A233A;
+  border-radius: 10px;
+}
+
+body {
+  background-color: black;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+}
+
+
+nav{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+
+
+nav .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.cartModal{
+  position: absolute;
+  top: 65px !important;
+  right: 0px !important;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: start;
+  transition: all 0.3s ease-in-out;
+  overflow-y: scroll;
+  background-color: rgb(226, 225, 225);
+  border-radius: 0px 0px 0px 20px;
+  padding: 20px 30px;
+}
+
+
+.cartModal-content{
+  background-color: #FFFFFF;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  gap: 40px;
+}
+.cartModal-content img{
+  width: 60px;
+  height: 45px;
+}
+.cartModal-content h4{
+  font-size: 14px;
+}
+.cart-delete{
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cart-delete:hover{
+  color: red;
+}
+
+.cart{
+  position: relative;
+  cursor: pointer;
+}
+
+.cart span{
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  background-color: #4A233A;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+.nav-links li {
+  margin-left: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffffcc;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover {
+  color: #ffffff;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ffffff;
+}
+.nav-icon {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav-icon img {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.nav-icon img:hover {
+  transform: translateY(-5px);
+}
+
+/* hero */
+
+.hero {
+  background-image: url("/public/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title {
+  margin-top: 130px;
+}
+.hero .hero-title h1 {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.hero .hero-title p {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffffcc;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.hero-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.buy {
+  background-color: #3946af;
+  color: white;
+  padding: 13px 45px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.learn-more {
+  background-color: transparent;
+  color: #5f70ff;
+  padding: 13px 30px;
+  border: 1px solid #5f70ff;
+  border-radius: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buy:hover {
+  background-color: #ffffff;
+  color: #3946af;
+}
+.learn-more:hover {
+  background-color: #ffffff;
+  color: #3946af;
+}
+/* section 1 */
+
+#mac {
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  color: black;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.section-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 40px;
+}
+.section-subtitle h2:hover,
+h2 {
+  cursor: pointer;
+  border-bottom: 3px solid black;
+  color: black;
+}
+.section-subtitle h3 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #787676;
+}
+.section-subtitle h3:hover {
+  color: black;
+  border-bottom: 3px solid black;
+  font-weight: 500;
+  cursor: pointer;
+}
+.section-subtitle h3.active {
+  color: black;
+  border-bottom: 3px solid black;
+  font-weight: 500;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+.cards-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+.cards-link a{
+  color: black;
+}
+
+
+.presentation-airpots{
+  position: relative;
+}
+
+.presentation-airpots h1{
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+}
+.presentation-airpots p{
+  width: 60%;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.airpots-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.arrow{
+  position: absolute;
+  top: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1100px;
+}
+.arrow-left{
+  transition: all .3s ease-in;
+cursor: pointer;
+}
+.arrow-left:hover{
+  transform: translateX(-5px);
+}
+.arrow-right{
+  transition: all .3s ease-in;
+cursor: pointer;
+}
+.arrow-right:hover{
+  transform: translateX(5px);
+}
+
+.presentation-btns{
+  position: absolute;
+  bottom: 60px;
+  left: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.presentation-btns .learn-more{
+  border: 1px solid rgba(25, 41, 167, 1);
+  color: rgba(25, 41, 167, 1);
+}
+.presentation-btns .learn-more:hover{
+  border: none;
+}
+
+
+#airpots {
+  background-color: white;
+}
+#airpots .card img{
+  width: 200px;
+  height: 130px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+/* section */
+
+
+#airpots-max{
+  background-image: url("./public/airpots-max.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 770px;
+}
+.airpotsMax-title{
+  text-align: center;
+  padding-top: 270px;
+  font-size: 120px;
+}
+.airpotsMax-btns{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+/* footer */
+footer{
+  background-color: white;
+}
+footer .footer{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+footer .container h3{
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+footer .container p{
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+footer .container p:hover{
+  color: rgb(103, 104, 105);
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-links{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-top: 2px solid rgba(0, 0, 0, 0.507);
+  padding-bottom: 20px;
+  padding-top: 10px;
+  gap: 20px;
+}
+.footer-links a{
+  color: rgba(0, 0, 0, 0.414);
+  text-decoration: none;
+  font-size: 13px;
+}
+.terms{
+  border-left: 1px solid rgba(0, 0, 0, 0.332);
+  border-right: 1px solid rgba(0, 0, 0, 0.299);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu{
+  color: rgba(255, 255, 255, 0.647);
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.modal{
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.532);
+  display: flex;
+  justify-content: end;
+  text-align: center;
+}
+.mobil-link{
+  width: 50%;
+  background-color: white;
+  border-radius: 20px 0px 0px 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobil-links{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.mobil-links a{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+@media (max-width: 1235px) {
+  .container{
+    width: 90%;
+  }
+  
+}
+
+@media (max-width: 577px) {
+    .nav-links{
+      display: none;
+    }
+    .menu{
+      display: block;
+    }
+    .cards{
+      justify-content: center;
+    }
+    .arrow{
+      display: none;
+    }
+    .presentation-airpots h1{
+      font-size: 20px;
+    }
+    .presentation-airpots p{
+      width: 90%;
+      font-size: 11px;
+    }.airpots-img{
+      width: 90%;
+    }
+    .presentation-btns{
+      bottom: 35px;
+      left: 170px;
+      gap: 15px;
+    }
+    .presentation-btns .buy{
+      padding: 11px 22px;
+      font-size: 12px;
+    }
+    .presentation-btns .learn-more{
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+    .airpotsMax-title{
+      font-size: 50px;
+    }
+}
+@media (max-width: 530px){
+  .presentation-btns{
+    bottom: 35px;
+    left: 140px;
+    gap: 15px;
+  }
+  footer .footer{
+    justify-content: start;
+    padding-bottom: 50px;
+  }
+
+}
+@media (max-width: 439px){
+  .presentation-btns{
+    bottom: 35px;
+    left: 100px;
+    gap: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .hero .hero-title h1{
+    font-size: 20px;
+    text-align: center;
+  }
+  .hero .hero-title p{
+    width: 60%;
+    font-size: 12px;
+    text-align: center;
+  }
+  .hero-btns .buy{
+    padding: 13px 33px;
+    font-size: 12px;
+  }
+  .hero-btns .learn-more{
+    padding: 13px 22px;
+    font-size: 10px;
+  }
+  .airpotsMax-title{
+    font-size: 40px;
+  }
+  .airpotsMax-btns{
+    gap: 20px;
+    padding-top: 300px;
+  }
+  .airpotsMax-btns .buy{
+    padding: 13px 33px;
+    font-size: 12px;
+  }
+  .airpotsMax-btns .learn-more{
+    padding: 13px 22px;
+    font-size: 10px;
+  }
+ 
+}
+@media (max-width: 400px) {
+  .presentation-btns{
+    bottom: 35px;
+    left: 80px;
+  }
+}
+@media (max-width: 340px) {
+  .presentation-btns{
+    bottom: 35px;
+    left: 60px;
+  }
+  .airpotsMax-btns{
+    gap: 20px;
+    padding-top: 350px;
+  }
+  .airpotsMax-btns .buy{
+    padding: 13px 20px;
+    font-size: 10px;
+  }
+  .airpotsMax-btns .learn-more{
+    padding: 10px 18px;
+    font-size: 8px;
+  }
+  .mobil-link{
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+@media (max-width: 295px) {
+  .presentation-btns{
+    bottom: 35px;
+    left: 50px;
+  }
+  .presentation-btns .buy{
+    padding: 7px 17px;
+    font-size: 10px;
+  }
+  .presentation-btns .learn-more{
+    padding: 5px 9px;
+    font-size: 10px;
+  }
+  .airpotsMax-title{
+    font-size: 30px;
+  }
+}
