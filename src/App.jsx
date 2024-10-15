@@ -9,7 +9,7 @@ function App() {
   const [macbook, setMacbook] = useState([
     {
       id: 0,
-      img: "/public/mac-1.png",
+      img: "./mac-1.png",
       name: "Apple Macbook Pro 14",
       price: 1.999,
       type: "laptop",
