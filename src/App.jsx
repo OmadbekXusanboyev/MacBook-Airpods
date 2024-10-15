@@ -6,7 +6,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [cartModal, setCartModal] = useState(false);
 
-  const [macbook, setMacbook] = useState([
+  const [products, setProducts] = useState([
     {
       id: 0,
       img: "./mac-1.png",
@@ -63,33 +63,38 @@ function App() {
       price: 1829.99,
       type: "desktop",
     },
-  ]);
-  const [airpots, setAirpots] = useState([
     {
       id: 8,
       img: "./airpots-1.png",
       name: "AirPods 2nd generation",
       price: 129,
+      type: "airpods",
     },
     {
       id: 9,
       img: "./airpots-2.png",
       name: "AirPods 3nd generation",
       price: 169,
+      type: "airpods",
     },
     {
       id: 10,
       img: "./airpots-3.png",
       name: "AirPods Pro 2nd generation",
       price: 249,
+      type: "airpods",
     },
     {
       id: 11,
       img: "./airpots-4.png",
       name: "AirPods Max",
       price: 249,
+      type: "airpods",
     },
   ]);
+  const [airpots, setAirpots] = useState(products.filter((item)=>{
+    return item.type == "airpods";
+  }));
 
   const [cartProdacts, setCartProducts] = useState([]);
 
@@ -98,7 +103,7 @@ function App() {
   const [type, setType] = useState("laptop");
 
   const filterProduct = (type) => {
-    const newPc = macbook.filter((item) => {
+    const newPc = products.filter((item) => {
       return item.type == type;
     });
     setPc(newPc);
@@ -120,7 +125,7 @@ function App() {
     }
   };
   const addCard = (id) => {
-    setCartProducts([...cartProdacts, macbook[id]]);
+    setCartProducts([...cartProdacts, products[id]]);
   };
 
   const deleteEl = (id) => {
