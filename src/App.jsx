@@ -161,7 +161,7 @@ function App() {
             )}
 
             <a href="#">
-              <img src="/public/Apple.svg" alt="" className="logo" />
+              <img src="./Apple.svg" alt="" className="logo" />
             </a>
             <div>
               <ul className="nav-links">
