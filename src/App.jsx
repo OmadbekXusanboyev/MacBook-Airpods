@@ -388,9 +388,9 @@ function App() {
 
             <div className="footer_bottom">
               <div className="social">
-                <img src="./public/facebook.png" alt="" />
-                <img src="./public/instagram.png" alt="" />
-                <img src="./public/twitter.png" alt="" />
+                <img src="./facebook.png" alt="" />
+                <img src="./instagram.png" alt="" />
+                <img src="./twitter.png" alt="" />
               </div>
               <div className="footer-links">
                 <a href="">Privacy Policy</a>
