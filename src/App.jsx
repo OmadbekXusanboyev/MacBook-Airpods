@@ -5,7 +5,8 @@ import Macbook from "./components/macbooks/Macbook";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [cartModal, setCartModal] = useState(false);
-
+  
+  
   const [products, setProducts] = useState([
     {
       id: 0,
@@ -92,9 +93,19 @@ function App() {
       type: "airpods",
     },
   ]);
-  const [airpots, setAirpots] = useState(products.filter((item)=>{
-    return item.type == "airpods";
-  }));
+
+  const [loader, setLoader] = useState(true);
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
+
+  const [airpots, setAirpots] = useState(
+    products.filter((item) => {
+      return item.type == "airpods";
+    })
+  );
 
   const [cartProdacts, setCartProducts] = useState([]);
 
@@ -149,7 +160,7 @@ function App() {
                 {cartProdacts.map((item) => {
                   return (
                     <div className="cartModal-content">
-                      <img src={item.img} alt="" />
+                      <img onLoad={handleImageLoad} src={item.img} alt="" />
                       <h5>{item.name}</h5>
                       <div className="cart-delete">
                         <i
@@ -250,19 +261,25 @@ function App() {
                 onClick={() => {
                   setType("laptop");
                 }}
-                className={type == "laptop" ? "desktop active" : "desktop"}>   Notebook 
-                </h3>
+                className={type == "laptop" ? "desktop active" : "desktop"}
+              >
+                {" "}
+                Notebook
+              </h3>
 
               <h3
                 onClick={() => {
                   setType("desktop");
                 }}
-                className={type == "desktop" ? "desktop active" : "desktop"} >   Desktop
+                className={type == "desktop" ? "desktop active" : "desktop"}
+              >
+                {" "}
+                Desktop
               </h3>
             </div>
             <div className="cards">
               {pc.map((card) => {
-                return <Macbook item={card} key={card.id} addCard={addCard} />;
+                return <Macbook handleImageLoad={handleImageLoad} item={card} key={card.id} addCard={addCard} />;
               })}
             </div>
             <div className="cards-link">
@@ -291,16 +308,8 @@ function App() {
                 <button className="learn-more">Learn More</button>
               </div>
               <div className="arrow">
-                <img
-                  className="arrow-left"
-                  src="./arroe-left.png"
-                  alt=""
-                />
-                <img
-                  className="arrow-right"
-                  src="./arrow-right.png"
-                  alt=""
-                />
+                <img className="arrow-left" src="./arroe-left.png" alt="" />
+                <img className="arrow-right" src="./arrow-right.png" alt="" />
               </div>
             </div>
           </div>
@@ -317,7 +326,7 @@ function App() {
 
             <div className="cards">
               {airpots.map((card) => {
-                return <Macbook item={card} key={card.id} addCard={addCard} />;
+                return <Macbook  handleImageLoad={handleImageLoad} item={card} key={card.id} addCard={addCard} />;
               })}
             </div>
             <div className="cards-link">

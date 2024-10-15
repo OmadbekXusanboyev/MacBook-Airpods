@@ -1,10 +1,10 @@
 import React from 'react'
 import './Macbook.css'
 
-function Macbook({item, addCard}) {
+function Macbook({item, addCard, handleImageLoad}) {
   return (
     <div className='card'>
-            <img src={item.img} alt="" />
+            <img onLoad={handleImageLoad} src={item.img} alt="" />
                   <div className="card-title">
                     <h3>{item.name}</h3>
                     <h5>${item.price} <span>USD</span></h5>
