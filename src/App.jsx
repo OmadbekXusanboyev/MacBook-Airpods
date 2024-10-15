@@ -278,7 +278,7 @@ function App() {
               </p>
               <img
                 className="airpots-img"
-                src="/public/airtpots-presentation.png"
+                src="./public/airtpots-presentation.png"
                 alt=""
               />
               <div className="presentation-btns">
@@ -288,12 +288,12 @@ function App() {
               <div className="arrow">
                 <img
                   className="arrow-left"
-                  src="/public/arroe-left.png"
+                  src="./public/arroe-left.png"
                   alt=""
                 />
                 <img
                   className="arrow-right"
-                  src="/public/arrow-right.png"
+                  src="./public/arrow-right.png"
                   alt=""
                 />
               </div>
@@ -388,9 +388,9 @@ function App() {
 
             <div className="footer_bottom">
               <div className="social">
-                <img src="/public/facebook.png" alt="" />
-                <img src="/public/instagram.png" alt="" />
-                <img src="/public/twitter.png" alt="" />
+                <img src="./public/facebook.png" alt="" />
+                <img src="./public/instagram.png" alt="" />
+                <img src="./public/twitter.png" alt="" />
               </div>
               <div className="footer-links">
                 <a href="">Privacy Policy</a>
