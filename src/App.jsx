@@ -183,9 +183,9 @@ function App() {
               </ul>
             </div>
             <div className="nav-icon">
-              <img src="/public/search.svg" alt="" />
+              <img src="./search.svg" alt="" />
               <div onClick={cartopenModal} className="cart">
-                <img src="/public/cart.png" alt="" />
+                <img src="./cart.png" alt="" />
                 <span>{cartProdacts.length}</span>
               </div>
               <div onClick={openModal} className="menu">
