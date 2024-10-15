@@ -67,25 +67,25 @@ function App() {
   const [airpots, setAirpots] = useState([
     {
       id: 8,
-      img: "./public/airpots-1.png",
+      img: "./airpots-1.png",
       name: "AirPods 2nd generation",
       price: 129,
     },
     {
       id: 9,
-      img: "./public/airpots-2.png",
+      img: "./airpots-2.png",
       name: "AirPods 3nd generation",
       price: 169,
     },
     {
       id: 10,
-      img: "./public/airpots-3.png",
+      img: "./airpots-3.png",
       name: "AirPods Pro 2nd generation",
       price: 249,
     },
     {
       id: 11,
-      img: "./public/airpots-4.png",
+      img: "./airpots-4.png",
       name: "AirPods Max",
       price: 249,
     },
@@ -278,7 +278,7 @@ function App() {
               </p>
               <img
                 className="airpots-img"
-                src="./public/airtpots-presentation.png"
+                src="./airtpots-presentation.png"
                 alt=""
               />
               <div className="presentation-btns">
@@ -288,12 +288,12 @@ function App() {
               <div className="arrow">
                 <img
                   className="arrow-left"
-                  src="./public/arroe-left.png"
+                  src="./arroe-left.png"
                   alt=""
                 />
                 <img
                   className="arrow-right"
-                  src="./public/arrow-right.png"
+                  src="./arrow-right.png"
                   alt=""
                 />
               </div>
