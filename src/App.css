@@ -348,7 +348,7 @@ cursor: pointer;
 
 
 #airpots-max{
-  background-image: url("./public/airpots-max.png");
+  background-image: url("./airpots-max.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
